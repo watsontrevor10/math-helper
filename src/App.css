@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin-bottom: 1em;
 }
 
 .App-logo {
@@ -81,20 +82,43 @@
   width: 5em;
   height: 2em;
   color: black;
-  font-size: large;
+  font-size: 30px;
   border-radius: 8ch;
   background-color: rgb(248, 248, 86);
   padding: 5px;
-  margin: 15px;
+  margin: 15px auto;
 }
 .Submit-button:hover {
   cursor: pointer;
 }
 
+.End-cont {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 15px auto;
+  /* background-color: green; */
+}
+
 .Message-cont {
-  max-width: 30%;
   margin: 0 auto;
+  width: 30%;
   border: 2px solid green;
+  /* background-color: red; */
+}
+
+.Message {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.Next-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 30%;
+  /* background-color: hotpink; */
 }
 
 .App-link {

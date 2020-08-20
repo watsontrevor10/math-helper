@@ -20,12 +20,12 @@ const App = () => {
     }
   };
 
-  const chnageSymbol = (e) => {
-    e.preventDefault();
-    console.log(e.target);
-    setMathProblem(e.target.value);
-    generateNums();
-  };
+  // const chnageSymbol = (e) => {
+  //   e.preventDefault();
+  //   console.log(e.target);
+  //   setMathProblem(e.target.value);
+  //   generateNums();
+  // };
 
   // sets the users answer in state and changes the message to display depending on whether the user was correct or not
   // checks to see if the problem is plus or minus
@@ -36,6 +36,7 @@ const App = () => {
     if (mathProblem === "plus") {
       if (answer === firstNum + secNum) {
         setMessage("Correct!  You are the best!");
+        document.getElementsByClassName("Message-cont").style.color = "green";
       } else {
         setMessage("Not quite, try again!");
       }
@@ -49,7 +50,7 @@ const App = () => {
   };
 
   // Generates numbers randomly when user clicks "Next", user can defines maxNum
-  const generateNums = (e) => {
+  const generateNums = () => {
     const initialNum = Math.floor(Math.random() * maxNum + 1);
     const secondNum = Math.floor(Math.random() * maxNum + 1);
 
@@ -116,6 +117,7 @@ const App = () => {
         </div>
 
         <hr />
+
         <div className="Results-cont">
           {/* Answers displayed here */}
           <div className="Results">
@@ -130,7 +132,7 @@ const App = () => {
           </div>
           {/* Answer form for user to submit answers and load the next math problem */}
           <div className="Submit-cont">
-            <form onSubmit={(e) => userAnswer(e)}>
+            <form onSubmit={(e) => userAnswer(e)} className="Submit-cont">
               <input
                 name="answer"
                 id="name"
@@ -139,22 +141,21 @@ const App = () => {
                 value={answer}
                 onChange={(e) => setAnswer(parseInt(e.target.value))}
               ></input>
-              <div>
-                <button
-                  onClick={() => generateNums()}
-                  className="Submit-button"
-                >
-                  Next
-                </button>
-                <input type="submit" value="Submit" className="Submit-button" />
-              </div>
+              <input type="submit" value="Submit" className="Submit-button" />
             </form>
           </div>
         </div>
-      </div>
-      <div className="Message-cont">
-        <div>
-          <h3>{message}</h3>
+        <div className="End-cont">
+          <div className="Message-cont">
+            <div>
+              <h3 className="Message">{message}</h3>
+            </div>
+          </div>
+          <div className="Next-btn">
+            <button onClick={() => generateNums()} className="Submit-button">
+              Next
+            </button>
+          </div>
         </div>
       </div>
     </div>
