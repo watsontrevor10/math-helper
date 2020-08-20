@@ -22,6 +22,7 @@ const App = () => {
 
   const chnageSymbol = (e) => {
     e.preventDefault();
+    console.log(e.target);
     setMathProblem(e.target.value);
     generateNums();
   };
@@ -48,7 +49,7 @@ const App = () => {
   };
 
   // Generates numbers randomly when user clicks "Next", user can defines maxNum
-  const generateNums = () => {
+  const generateNums = (e) => {
     const initialNum = Math.floor(Math.random() * maxNum + 1);
     const secondNum = Math.floor(Math.random() * maxNum + 1);
 
@@ -81,7 +82,7 @@ const App = () => {
                 Addition or Subtraction?
                 <br />
                 <button
-                  onClick={(e) => chnageSymbol(e)}
+                  onClick={() => setMathProblem("plus")}
                   value="plus"
                   className="Plus-button"
                 >
@@ -90,7 +91,7 @@ const App = () => {
               </label>
               <button
                 value="minus"
-                onClick={(e) => chnageSymbol(e)}
+                onClick={() => setMathProblem("minus")}
                 className="Minus-button"
               >
                 <FaMinus />
@@ -104,6 +105,7 @@ const App = () => {
                 Max Number{" "}
                 <input
                   name="maxNumber"
+                  type="number"
                   value={maxNum}
                   // chnages state when user changes number
                   onChange={(e) => setMaxNum(parseInt(e.target.value))}
@@ -132,18 +134,19 @@ const App = () => {
               <input
                 name="answer"
                 id="name"
+                type="number"
                 placeholder="Answer"
                 value={answer}
                 onChange={(e) => setAnswer(parseInt(e.target.value))}
               ></input>
               <div>
-                <input type="submit" value="Submit" className="Submit-button" />
                 <button
                   onClick={() => generateNums()}
                   className="Submit-button"
                 >
                   Next
                 </button>
+                <input type="submit" value="Submit" className="Submit-button" />
               </div>
             </form>
           </div>
