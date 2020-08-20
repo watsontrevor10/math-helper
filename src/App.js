@@ -136,18 +136,22 @@ const App = () => {
                 value={answer}
                 onChange={(e) => setAnswer(parseInt(e.target.value))}
               ></input>
-              <br />
-              <input type="submit" value="Submit" className="Submit-button" />
-              <button onClick={() => generateNums()} className="Submit-button">
-                Next
-              </button>
+              <div>
+                <input type="submit" value="Submit" className="Submit-button" />
+                <button
+                  onClick={() => generateNums()}
+                  className="Submit-button"
+                >
+                  Next
+                </button>
+              </div>
             </form>
           </div>
         </div>
       </div>
-      <div>
+      <div className="Message-cont">
         <div>
-          <h3 className="Message">{message}</h3>
+          <h3>{message}</h3>
         </div>
       </div>
     </div>
