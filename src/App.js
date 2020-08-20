@@ -136,7 +136,8 @@ const App = () => {
                 name="answer"
                 id="name"
                 type="number"
-                placeholder="Answer"
+                autoFocus
+                placeholder="answer"
                 value={answer}
                 onChange={(e) => setAnswer(parseInt(e.target.value))}
               ></input>
