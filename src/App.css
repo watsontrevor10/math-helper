@@ -7,32 +7,97 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 10vh;
+  background-color: #0077ff;
+  height: 13vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(2em + 2vmin);
   color: white;
+}
+
+.Answers-cont {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 10px;
+}
+
+.Main-cont {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.Results-cont {
+  display: flex;
+  flex-flow: row nowrap;
+  column-count: 2;
+  justify-content: center; 
+  margin: 2em;
+  column-gap: 4em;
+}
+
+.Results {
+  border-radius: .8ch;
+  padding: .5em;
+}
+
+.Selector-cont {
+  margin: 2em 0 0 0;
+  padding: 2em;
+  border-radius: .8ch;
+}
+
+.Plus-button {
+  width: 6em;
+  height: 6em;
+  color: rgb(209, 206, 28);
+  /* border: 1px solid black; */
+  background-color: transparent;
+  margin: 20px auto;
+  padding: 5px;
+  font-size: x-large;
+}
+
+.Minus-button {
+  width: 6em;
+  height: 6em;
+  color: rgb(211, 12, 12);
+  /* border: 1px solid black; */
+  background-color: transparent;
+  margin: 20px 10px 20px 10px;
+  padding: 5px;
+  font-size: x-large;
+}
+
+.Submit-cont {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+
+}
+ 
+.Submit-button {
+  width: 5em;
+  height: 2em;
+  color: black;
+  font-size: large;
+  background-color: burlywood;
+  padding: 5px;
+  margin: 15px;
+}
+.Submit-button:hover {
+  cursor: pointer;
+}
+
+.Message {
+  max-width: 30%;
+  margin: 0 auto;
+  padding: .4em;
 }
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

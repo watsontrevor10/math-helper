@@ -1,10 +1,49 @@
+@font-face {
+  font-family: "IndieFlower";
+  src: url("./IndieFlower-Regular.ttf")
+}
+
+html {
+  background-color: rgb(240, 239, 239);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'IndieFlower', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h2 {
+  margin: .2em;
+  font-size: 6em;
+}
+
+button {
+  border: none;
+  margin: 5em auto;
+  padding: 10px;
+}
+button:hover {
+  cursor: pointer;
+}
+
+input {
+  font-size: medium;
+  max-width: 7em;
+  height: 2em;
+  font-size: xx-large;
+  text-align: center;
+  border-radius: .8ch;
+  border: none;
+}
+
+label {
+  font-size: 3em;
+  font-weight: bold;
+
 }
 
 code {
