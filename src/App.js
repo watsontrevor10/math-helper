@@ -36,7 +36,6 @@ const App = () => {
     if (mathProblem === "plus") {
       if (answer === firstNum + secNum) {
         setMessage("Correct!  You are the best!");
-        document.getElementsByClassName("Message-cont").style.color = "green";
       } else {
         setMessage("Not quite, try again!");
       }
@@ -74,7 +73,7 @@ const App = () => {
         <h1>Math Helper</h1>
       </header>
 
-      {/* Initial problem setup selectors */}
+      {/* Initial problem setup area */}
       <div className="Main-cont">
         <div className="Selector-cont">
           <div>
