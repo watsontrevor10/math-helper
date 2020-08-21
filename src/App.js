@@ -28,13 +28,6 @@ const App = () => {
     }
   };
 
-  // const chnageSymbol = (e) => {
-  //   e.preventDefault();
-  //   console.log(e.target);
-  //   setMathProblem(e.target.value);
-  //   generateNums();
-  // };
-
   // sets the users answer in state and changes the message to display depending on whether the user was correct or not
   // checks to see if the problem is plus or minus
   const userAnswer = (e) => {
