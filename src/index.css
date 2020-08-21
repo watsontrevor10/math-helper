@@ -23,7 +23,7 @@ h2 {
 
 button {
   border: none;
-  margin: 5em auto;
+  margin: 0 auto;
   padding: 10px;
 }
 button:hover {

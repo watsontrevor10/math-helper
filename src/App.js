@@ -14,9 +14,17 @@ const App = () => {
   // changes the symbol displayed in between the two numbers depending on the value of mathProblem
   const ProblemSymbol = () => {
     if (mathProblem === "plus") {
-      return "+";
+      return (
+        <IconContext.Provider value={{ color: "#29ab05", size: ".6em" }}>
+          <FaPlus />
+        </IconContext.Provider>
+      );
     } else {
-      return "-";
+      return (
+        <IconContext.Provider value={{ color: "#e20025", size: ".6em"}}>
+          <FaMinus />
+        </IconContext.Provider>
+      );
     }
   };
 
@@ -151,8 +159,8 @@ const App = () => {
               <h3 className="Message">{message}</h3>
             </div>
           </div>
-          <div className="Next-btn">
-            <button onClick={() => generateNums()} className="Submit-button">
+          <div className="Next-btn-cont">
+            <button onClick={() => generateNums()} className="Next-btn">
               Next
             </button>
           </div>
